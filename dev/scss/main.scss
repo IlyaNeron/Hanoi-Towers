@@ -1,0 +1,153 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.structure-generation-controls {
+  border: 5px solid #ff0000;
+  padding: 50px 0;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.btn-start {
+  background: #fff;
+  padding: 20px 15px;
+  border: 2px solid #333;
+  font-size: 20px;
+  font-weight: 700;
+
+  &:disabled {
+    cursor: auto;
+    border: 2px solid #ccc;
+    color: #ccc;
+  }
+
+}
+
+.input-row {
+
+  &:not(:last-child) {
+    margin: 0 0 30px;
+  }
+
+}
+
+.towers-wrapper {
+  display: flex;
+  width: 50%;
+  height: 175px;
+  margin: 0 auto;
+}
+
+.tower {
+  position: relative;
+  width: (100%/3);
+  border-bottom: 4px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 100px;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+
+  .disc {
+    height: 20px;
+    position: relative;
+    border: 1px solid #333;
+    cursor: pointer;
+    z-index: 2;
+    width: 50px;
+
+  }
+
+}
+
+.timer-block {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  align-items: center;
+  flex-direction: column;
+
+  .timer-num {
+    display: flex;
+    margin: 0 0 10px;
+  }
+
+  .timer-controls {
+    display: flex;
+
+    button {
+      background: #fff;
+      border: 2px solid #333;
+      padding: 10px 15px;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: sans-serif;
+      outline: none;
+      transition: color 0.2s linear, border-color 0.2s linear;
+      display: none;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &:disabled {
+        border-color: #ccc;
+        color: #ccc;
+        cursor: default;
+      }
+
+    }
+
+    .btn_timer_pause {
+      color: #ff0000;
+      border-color: #ff0000;
+    }
+
+  }
+
+}
+
+.win-popup {
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #333;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.75);
+
+  .btn_new_game {
+    background: #fff;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}

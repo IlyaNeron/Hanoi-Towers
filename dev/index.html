@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test jQuery projects</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="main">
+        <form action="#" class="structure-generation-controls">
+            <div class="input-row">
+                <p>Введите кол-во дисков:</p>
+                <select class="discs_value">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="input-row">
+                <button type="button" class="btn-start">Начать игру</button>
+            </div>
+            <div class="timer-block">
+                <div class="timer-num">
+                    <div class="minutes">00:</div>
+                    <div class="seconds">00</div>
+                </div>
+                <div class="timer-controls">
+                    <button type="button" class="btn_pause">Пауза</button>
+                    <button type="button" class="btn_reset">Сброс</button>
+                </div>
+            </div>
+        </form>
+        <div class="towers-wrapper">
+            <div class="tower"></div>
+            <div class="tower"></div>
+            <div class="tower"></div>
+        </div>
+    </main>
+</div>
+<div class="win-popup">
+    <h1>Вы выиграли!</h1>
+    <button type="button" class="btn_new_game">Начать новую игру</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
