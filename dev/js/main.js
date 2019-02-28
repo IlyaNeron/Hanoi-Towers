@@ -20,7 +20,7 @@ $(function () {
 	btn_new_game.click(newGame);
 
 	function newGame() {
-		win_popup.hide();
+		win_popup.hide().css('opacity', '0');
 		tower.empty();
 		discs_value.prop('disabled', false);
 		btn_start.prop('disabled', false);
@@ -33,7 +33,7 @@ $(function () {
 		seconds_elem.html('00');
 		timerStopCall();
 		resetGame();
-		btn_reset.hide();
+		btn_reset.hide().prop('disabled', false);
 	}
 
 	$( document ).ready(function jsonColorsArray() {
@@ -53,6 +53,14 @@ $(function () {
 		timerStopCall();
 		resetGame();
 	}
+
+	$( document ).ready(function selectStyle() {
+		discs_value.children().css({
+			'background': '#111',
+			'border': '1px solid #ccc',
+			'cursor': 'pointer',
+		});
+	});
 
 	function drag() {
 		tower.children().draggable({
@@ -88,6 +96,7 @@ $(function () {
 					tower.children().draggable('disable');
 					prop = false;
 					btn_pause.prop('disabled', true);
+					btn_reset.prop('disabled', true);
 					popupWin();
 				}
 			}

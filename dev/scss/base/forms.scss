@@ -1,0 +1,32 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  &:disabled:hover {
+    background: inherit;
+    color: #7a706e;
+    cursor: default;
+  }
+
+  &:disabled {
+    color: #7a706e;
+  }
+
+}
+
+.input-row {
+
+  &:not(:last-child) {
+    margin: 0 0 30px;
+  }
+
+}
+
+.discs_value {
+  background: none;
+  color: #ccc;
+  border: none;
+}

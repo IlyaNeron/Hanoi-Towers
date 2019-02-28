@@ -1,49 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test jQuery projects</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Hanoi Towers</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
+    <header class="header">
+        <h1><< Welcome to Hanoi Towers game >></h1>
+    </header>
     <main class="main">
-        <form action="#" class="structure-generation-controls">
-            <div class="input-row">
-                <p>Введите кол-во дисков:</p>
-                <select class="discs_value">
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                </select>
-            </div>
-            <div class="input-row">
-                <button type="button" class="btn-start">Начать игру</button>
-            </div>
-            <div class="timer-block">
-                <div class="timer-num">
-                    <div class="minutes">00:</div>
-                    <div class="seconds">00</div>
+        <section class="section-game-controls">
+            <form action="#" class="structure-generation-controls">
+                <div class="input-row">
+                    <label>> Select number of discs :</label>
+                    <select class="discs_value">
+                        <option value="2">[ 2 ]</option>
+                        <option value="4">[ 4 ]</option>
+                        <option value="6">[ 6 ]</option>
+                    </select>
                 </div>
-                <div class="timer-controls">
-                    <button type="button" class="btn_pause">Пауза</button>
-                    <button type="button" class="btn_reset">Сброс</button>
+                <div class="input-row">
+                    <button type="button" class="btn-start">> Press to start a game</button>
                 </div>
+                <div class="timer-block">
+                    <div class="timer-num">
+                        <div class="minutes">00:</div>
+                        <div class="seconds">00</div>
+                    </div>
+                    <div class="timer-controls">
+                        <button type="button" class="btn_pause">> Press to Pause</button>
+                        <button type="button" class="btn_reset">> Press to Reset</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="section-game">
+            <div class="towers-wrapper">
+                <div class="tower"></div>
+                <div class="tower"></div>
+                <div class="tower"></div>
             </div>
-        </form>
-        <div class="towers-wrapper">
-            <div class="tower"></div>
-            <div class="tower"></div>
-            <div class="tower"></div>
-        </div>
+        </section>
     </main>
+    <footer class="footer">
+        <span>Click = Choose</span>
+        <span>F5 = Reload Page</span>
+    </footer>
 </div>
 <div class="win-popup">
-    <h1>Вы выиграли!</h1>
-    <button type="button" class="btn_new_game">Начать новую игру</button>
+    <h1>> Win!</h1>
+    <button type="button" class="btn_new_game">> Press to start a new game</button>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="

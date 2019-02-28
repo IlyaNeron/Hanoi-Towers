@@ -1,0 +1,41 @@
+.towers-wrapper {
+  display: flex;
+  width: 50%;
+  height: 175px;
+  margin: 0 auto;
+}
+
+.tower {
+  position: relative;
+  width: (100%/3);
+  border-bottom: 4px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 100px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+
+  .disc {
+    height: 20px;
+    position: relative;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    z-index: 2;
+    width: 50px;
+  }
+
+}

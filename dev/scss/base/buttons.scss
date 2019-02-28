@@ -1,0 +1,38 @@
+button {
+  cursor: pointer;
+  color: #ccc;
+  font-weight: 400;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+
+  &:hover {
+    background: #ccc;
+    color: #111;
+  }
+
+  &:disabled:hover {
+    background: inherit;
+    color: #7a706e;
+    cursor: default;
+  }
+
+  &:disabled {
+    color: #7a706e;
+  }
+
+}
+
+.btn-start {
+  font-size: 22px;
+}
+
+.btn_timer_pause {
+  color: #ff0000 !important;
+  border-color: #ff0000;
+}
+
+.btn_new_game {
+  font-size: 20px;
+}
